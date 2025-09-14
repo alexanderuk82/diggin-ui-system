@@ -1,0 +1,193 @@
+/* ================================
+   🎨 DESIGN TOKENS - COLORS
+   ================================
+   
+   Base color system for the design system
+   Following WCAG AA contrast requirements
+   ================================ */
+
+:root {
+  /* ===== PRIMARY COLORS ===== */
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  --color-primary-800: #075985;
+  --color-primary-900: #0c4a6e;
+  --color-primary-950: #082f49;
+
+  /* ===== SECONDARY COLORS ===== */
+  --color-secondary-50: #f8fafc;
+  --color-secondary-100: #f1f5f9;
+  --color-secondary-200: #e2e8f0;
+  --color-secondary-300: #cbd5e1;
+  --color-secondary-400: #94a3b8;
+  --color-secondary-500: #64748b;
+  --color-secondary-600: #475569;
+  --color-secondary-700: #334155;
+  --color-secondary-800: #1e293b;
+  --color-secondary-900: #0f172a;
+
+  /* ===== NEUTRAL COLORS ===== */
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0a0a0a;
+
+  /* ===== SEMANTIC COLORS ===== */
+  
+  /* Success Colors */
+  --color-success-50: #f0fdf4;
+  --color-success-100: #dcfce7;
+  --color-success-200: #bbf7d0;
+  --color-success-300: #86efac;
+  --color-success-400: #4ade80;
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+  --color-success-700: #15803d;
+  --color-success-800: #166534;
+  --color-success-900: #14532d;
+
+  /* Warning Colors */
+  --color-warning-50: #fefce8;
+  --color-warning-100: #fef9c3;
+  --color-warning-200: #fef08a;
+  --color-warning-300: #fde047;
+  --color-warning-400: #facc15;
+  --color-warning-500: #eab308;
+  --color-warning-600: #ca8a04;
+  --color-warning-700: #a16207;
+  --color-warning-800: #854d0e;
+  --color-warning-900: #713f12;
+
+  /* Error Colors */
+  --color-error-50: #fef2f2;
+  --color-error-100: #fee2e2;
+  --color-error-200: #fecaca;
+  --color-error-300: #fca5a5;
+  --color-error-400: #f87171;
+  --color-error-500: #ef4444;
+  --color-error-600: #dc2626;
+  --color-error-700: #b91c1c;
+  --color-error-800: #991b1b;
+  --color-error-900: #7f1d1d;
+
+  /* Info Colors */
+  --color-info-50: #eff6ff;
+  --color-info-100: #dbeafe;
+  --color-info-200: #bfdbfe;
+  --color-info-300: #93c5fd;
+  --color-info-400: #60a5fa;
+  --color-info-500: #3b82f6;
+  --color-info-600: #2563eb;
+  --color-info-700: #1d4ed8;
+  --color-info-800: #1e40af;
+  --color-info-900: #1e3a8a;
+
+  /* ===== FUNCTIONAL COLORS ===== */
+  
+  /* Background Colors */
+  --color-background-primary: var(--color-neutral-50);
+  --color-background-secondary: var(--color-neutral-100);
+  --color-background-tertiary: var(--color-neutral-200);
+  --color-background-inverse: var(--color-neutral-900);
+  
+  /* Text Colors */
+  --color-text-primary: var(--color-neutral-900);
+  --color-text-secondary: var(--color-neutral-700);
+  --color-text-tertiary: var(--color-neutral-500);
+  --color-text-inverse: var(--color-neutral-50);
+  --color-text-disabled: var(--color-neutral-400);
+  
+  /* Border Colors */
+  --color-border-primary: var(--color-neutral-300);
+  --color-border-secondary: var(--color-neutral-200);
+  --color-border-focus: var(--color-primary-500);
+  --color-border-error: var(--color-error-500);
+  --color-border-success: var(--color-success-500);
+  
+  /* Interactive Colors */
+  --color-interactive-primary: var(--color-primary-600);
+  --color-interactive-primary-hover: var(--color-primary-700);
+  --color-interactive-primary-active: var(--color-primary-800);
+  --color-interactive-secondary: var(--color-secondary-600);
+  --color-interactive-secondary-hover: var(--color-secondary-700);
+  --color-interactive-secondary-active: var(--color-secondary-800);
+  
+  /* Focus Colors */
+  --color-focus: var(--color-primary-500);
+  --color-focus-ring: var(--color-primary-500);
+  
+  /* Overlay Colors */
+  --color-overlay-light: rgba(255, 255, 255, 0.8);
+  --color-overlay-dark: rgba(0, 0, 0, 0.5);
+  --color-overlay-backdrop: rgba(0, 0, 0, 0.25);
+}
+
+/* ===== DARK THEME ===== */
+[data-theme="dark"] {
+  /* Background Colors */
+  --color-background-primary: var(--color-neutral-900);
+  --color-background-secondary: var(--color-neutral-800);
+  --color-background-tertiary: var(--color-neutral-700);
+  --color-background-inverse: var(--color-neutral-50);
+  
+  /* Text Colors */
+  --color-text-primary: var(--color-neutral-50);
+  --color-text-secondary: var(--color-neutral-300);
+  --color-text-tertiary: var(--color-neutral-400);
+  --color-text-inverse: var(--color-neutral-900);
+  --color-text-disabled: var(--color-neutral-600);
+  
+  /* Border Colors */
+  --color-border-primary: var(--color-neutral-600);
+  --color-border-secondary: var(--color-neutral-700);
+  
+  /* Overlay Colors */
+  --color-overlay-light: rgba(0, 0, 0, 0.8);
+  --color-overlay-dark: rgba(255, 255, 255, 0.1);
+  --color-overlay-backdrop: rgba(0, 0, 0, 0.75);
+}
+
+/* ===== HIGH CONTRAST THEME ===== */
+[data-theme="high-contrast"] {
+  /* Primary Colors */
+  --color-primary-600: #000000;
+  --color-primary-700: #000000;
+  --color-primary-800: #000000;
+  
+  /* Text Colors */
+  --color-text-primary: #000000;
+  --color-text-secondary: #000000;
+  --color-text-inverse: #ffffff;
+  
+  /* Background Colors */
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #ffffff;
+  --color-background-inverse: #000000;
+  
+  /* Border Colors */
+  --color-border-primary: #000000;
+  --color-border-secondary: #000000;
+  --color-border-focus: #ff0000;
+  
+  /* Interactive Colors */
+  --color-interactive-primary: #000000;
+  --color-interactive-primary-hover: #333333;
+  --color-interactive-primary-active: #666666;
+  
+  /* Focus Colors */
+  --color-focus: #ff0000;
+  --color-focus-ring: #ff0000;
+}

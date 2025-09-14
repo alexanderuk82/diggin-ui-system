@@ -1,0 +1,209 @@
+/* ================================
+   🌘 DESIGN TOKENS - SHADOWS
+   ================================
+   
+   Shadow system with elevation
+   levels and focus states
+   ================================ */
+
+:root {
+  /* ===== BASE SHADOW COLORS ===== */
+  --shadow-color-primary: 0, 0, 0;              /* Black base */
+  --shadow-color-secondary: 51, 65, 85;         /* Slate-700 */
+  --shadow-color-brand: 59, 130, 246;           /* Brand blue */
+  --shadow-color-success: 34, 197, 94;          /* Success green */
+  --shadow-color-warning: 245, 158, 11;         /* Warning amber */
+  --shadow-color-error: 239, 68, 68;            /* Error red */
+  
+  /* ===== ELEVATION SHADOWS ===== */
+  
+  /* Level 0 - No elevation */
+  --shadow-none: none;
+  
+  /* Level 1 - Minimal elevation (cards, buttons) */
+  --shadow-xs: 0 1px 2px 0 rgba(var(--shadow-color-primary), 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(var(--shadow-color-primary), 0.1), 
+               0 1px 2px -1px rgba(var(--shadow-color-primary), 0.1);
+  
+  /* Level 2 - Low elevation (dropdowns, tooltips) */
+  --shadow-md: 0 4px 6px -1px rgba(var(--shadow-color-primary), 0.1), 
+               0 2px 4px -2px rgba(var(--shadow-color-primary), 0.1);
+  
+  /* Level 3 - Medium elevation (modals, popovers) */
+  --shadow-lg: 0 10px 15px -3px rgba(var(--shadow-color-primary), 0.1), 
+               0 4px 6px -4px rgba(var(--shadow-color-primary), 0.1);
+  
+  /* Level 4 - High elevation (overlays) */
+  --shadow-xl: 0 20px 25px -5px rgba(var(--shadow-color-primary), 0.1), 
+               0 8px 10px -6px rgba(var(--shadow-color-primary), 0.1);
+  
+  /* Level 5 - Maximum elevation (drawers, main modals) */
+  --shadow-2xl: 0 25px 50px -12px rgba(var(--shadow-color-primary), 0.25);
+  
+  /* ===== INNER SHADOWS ===== */
+  --shadow-inner: inset 0 2px 4px 0 rgba(var(--shadow-color-primary), 0.05);
+  --shadow-inner-md: inset 0 4px 8px 0 rgba(var(--shadow-color-primary), 0.1);
+  --shadow-inner-lg: inset 0 8px 16px 0 rgba(var(--shadow-color-primary), 0.15);
+  
+  /* ===== FOCUS SHADOWS ===== */
+  --shadow-focus-primary: 0 0 0 3px rgba(var(--shadow-color-brand), 0.1);
+  --shadow-focus-secondary: 0 0 0 3px rgba(var(--shadow-color-secondary), 0.1);
+  --shadow-focus-success: 0 0 0 3px rgba(var(--shadow-color-success), 0.1);
+  --shadow-focus-warning: 0 0 0 3px rgba(var(--shadow-color-warning), 0.1);
+  --shadow-focus-error: 0 0 0 3px rgba(var(--shadow-color-error), 0.1);
+  
+  /* ===== GLOW EFFECTS ===== */
+  --shadow-glow-primary: 0 0 20px rgba(var(--shadow-color-brand), 0.15);
+  --shadow-glow-success: 0 0 20px rgba(var(--shadow-color-success), 0.15);
+  --shadow-glow-warning: 0 0 20px rgba(var(--shadow-color-warning), 0.15);
+  --shadow-glow-error: 0 0 20px rgba(var(--shadow-color-error), 0.15);
+  
+  /* ===== SEMANTIC SHADOWS ===== */
+  
+  /* Component Shadows */
+  --shadow-button: var(--shadow-xs);
+  --shadow-button-hover: var(--shadow-sm);
+  --shadow-button-focus: var(--shadow-focus-primary);
+  
+  --shadow-card: var(--shadow-sm);
+  --shadow-card-hover: var(--shadow-md);
+  
+  --shadow-input: var(--shadow-inner);
+  --shadow-input-focus: var(--shadow-focus-primary);
+  
+  --shadow-dropdown: var(--shadow-lg);
+  --shadow-modal: var(--shadow-2xl);
+  --shadow-tooltip: var(--shadow-md);
+  --shadow-popover: var(--shadow-lg);
+  
+  /* Navigation Shadows */
+  --shadow-navbar: var(--shadow-sm);
+  --shadow-sidebar: var(--shadow-lg);
+  --shadow-header: var(--shadow-xs);
+  
+  /* Interactive Shadows */
+  --shadow-hover: var(--shadow-md);
+  --shadow-active: var(--shadow-inner);
+  --shadow-selected: var(--shadow-inner-md);
+  
+  /* Notification Shadows */
+  --shadow-notification: var(--shadow-lg);
+  --shadow-toast: var(--shadow-md);
+  --shadow-banner: var(--shadow-sm);
+}
+
+/* ===== DARK THEME ADJUSTMENTS ===== */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Stronger shadows for dark theme */
+    --shadow-xs: 0 1px 2px 0 rgba(var(--shadow-color-primary), 0.15);
+    --shadow-sm: 0 1px 3px 0 rgba(var(--shadow-color-primary), 0.2), 
+                 0 1px 2px -1px rgba(var(--shadow-color-primary), 0.2);
+    --shadow-md: 0 4px 6px -1px rgba(var(--shadow-color-primary), 0.2), 
+                 0 2px 4px -2px rgba(var(--shadow-color-primary), 0.2);
+    --shadow-lg: 0 10px 15px -3px rgba(var(--shadow-color-primary), 0.2), 
+                 0 4px 6px -4px rgba(var(--shadow-color-primary), 0.2);
+    --shadow-xl: 0 20px 25px -5px rgba(var(--shadow-color-primary), 0.2), 
+                 0 8px 10px -6px rgba(var(--shadow-color-primary), 0.2);
+    --shadow-2xl: 0 25px 50px -12px rgba(var(--shadow-color-primary), 0.35);
+    
+    /* Enhanced inner shadows for dark theme */
+    --shadow-inner: inset 0 2px 4px 0 rgba(var(--shadow-color-primary), 0.15);
+    --shadow-inner-md: inset 0 4px 8px 0 rgba(var(--shadow-color-primary), 0.2);
+    --shadow-inner-lg: inset 0 8px 16px 0 rgba(var(--shadow-color-primary), 0.25);
+  }
+}
+
+/* ===== HIGH CONTRAST THEME ===== */
+[data-theme="high-contrast"] {
+  /* Simplified shadows for high contrast */
+  --shadow-xs: 0 1px 2px 0 rgba(var(--shadow-color-primary), 0.3);
+  --shadow-sm: 0 1px 3px 0 rgba(var(--shadow-color-primary), 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(var(--shadow-color-primary), 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(var(--shadow-color-primary), 0.4);
+  --shadow-xl: 0 20px 25px -5px rgba(var(--shadow-color-primary), 0.4);
+  --shadow-2xl: 0 25px 50px -12px rgba(var(--shadow-color-primary), 0.5);
+  
+  /* Stronger focus indicators */
+  --shadow-focus-primary: 0 0 0 4px rgba(var(--shadow-color-brand), 0.3);
+  --shadow-focus-secondary: 0 0 0 4px rgba(var(--shadow-color-secondary), 0.3);
+  --shadow-focus-success: 0 0 0 4px rgba(var(--shadow-color-success), 0.3);
+  --shadow-focus-warning: 0 0 0 4px rgba(var(--shadow-color-warning), 0.3);
+  --shadow-focus-error: 0 0 0 4px rgba(var(--shadow-color-error), 0.3);
+}
+
+/* ===== REDUCED MOTION ADJUSTMENTS ===== */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    /* Simplified shadows for reduced motion */
+    --shadow-glow-primary: none;
+    --shadow-glow-success: none;
+    --shadow-glow-warning: none;
+    --shadow-glow-error: none;
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+/* Elevation Utilities */
+.shadow-none { box-shadow: var(--shadow-none); }
+.shadow-xs { box-shadow: var(--shadow-xs); }
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+.shadow-2xl { box-shadow: var(--shadow-2xl); }
+
+/* Inner Shadow Utilities */
+.shadow-inner { box-shadow: var(--shadow-inner); }
+.shadow-inner-md { box-shadow: var(--shadow-inner-md); }
+.shadow-inner-lg { box-shadow: var(--shadow-inner-lg); }
+
+/* Focus Shadow Utilities */
+.shadow-focus-primary { box-shadow: var(--shadow-focus-primary); }
+.shadow-focus-secondary { box-shadow: var(--shadow-focus-secondary); }
+.shadow-focus-success { box-shadow: var(--shadow-focus-success); }
+.shadow-focus-warning { box-shadow: var(--shadow-focus-warning); }
+.shadow-focus-error { box-shadow: var(--shadow-focus-error); }
+
+/* Glow Effect Utilities */
+.shadow-glow-primary { box-shadow: var(--shadow-glow-primary); }
+.shadow-glow-success { box-shadow: var(--shadow-glow-success); }
+.shadow-glow-warning { box-shadow: var(--shadow-glow-warning); }
+.shadow-glow-error { box-shadow: var(--shadow-glow-error); }
+
+/* Component Shadow Utilities */
+.shadow-button { box-shadow: var(--shadow-button); }
+.shadow-card { box-shadow: var(--shadow-card); }
+.shadow-dropdown { box-shadow: var(--shadow-dropdown); }
+.shadow-modal { box-shadow: var(--shadow-modal); }
+.shadow-tooltip { box-shadow: var(--shadow-tooltip); }
+.shadow-popover { box-shadow: var(--shadow-popover); }
+
+/* Interactive State Utilities */
+.shadow-hover { box-shadow: var(--shadow-hover); }
+.shadow-active { box-shadow: var(--shadow-active); }
+.shadow-selected { box-shadow: var(--shadow-selected); }
+
+/* ===== HOVER AND FOCUS TRANSITIONS ===== */
+
+.shadow-transition {
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.shadow-transition-long {
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effects for interactive elements */
+.hover\:shadow-sm:hover { box-shadow: var(--shadow-sm); }
+.hover\:shadow-md:hover { box-shadow: var(--shadow-md); }
+.hover\:shadow-lg:hover { box-shadow: var(--shadow-lg); }
+.hover\:shadow-xl:hover { box-shadow: var(--shadow-xl); }
+
+/* Focus effects for interactive elements */
+.focus\:shadow-focus-primary:focus { box-shadow: var(--shadow-focus-primary); }
+.focus\:shadow-focus-secondary:focus { box-shadow: var(--shadow-focus-secondary); }
+.focus\:shadow-focus-success:focus { box-shadow: var(--shadow-focus-success); }
+.focus\:shadow-focus-warning:focus { box-shadow: var(--shadow-focus-warning); }
+.focus\:shadow-focus-error:focus { box-shadow: var(--shadow-focus-error); }

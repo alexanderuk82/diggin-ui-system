@@ -1,0 +1,355 @@
+/* ================================
+   📱 DESIGN TOKENS - BREAKPOINTS
+   ================================
+   
+   Responsive breakpoint system
+   for mobile-first design
+   ================================ */
+
+:root {
+  /* ===== BREAKPOINT VALUES ===== */
+  --breakpoint-xs: 320px;     /* Extra small devices (small phones) */
+  --breakpoint-sm: 480px;     /* Small devices (phones) */
+  --breakpoint-md: 768px;     /* Medium devices (tablets) */
+  --breakpoint-lg: 1024px;    /* Large devices (desktops) */
+  --breakpoint-xl: 1280px;    /* Extra large devices (large desktops) */
+  --breakpoint-2xl: 1536px;   /* 2X large devices (very large desktops) */
+  
+  /* ===== CONTAINER MAX WIDTHS ===== */
+  --container-xs: 100%;
+  --container-sm: 100%;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+  
+  /* ===== CONTENT MAX WIDTHS ===== */
+  --content-width-narrow: 640px;    /* Blog posts, articles */
+  --content-width-medium: 768px;    /* Forms, cards */
+  --content-width-wide: 1024px;     /* Main content areas */
+  --content-width-full: 100%;       /* Full width layouts */
+  
+  /* ===== GRID COLUMNS ===== */
+  --grid-columns-xs: 4;       /* 4 columns on extra small screens */
+  --grid-columns-sm: 6;       /* 6 columns on small screens */
+  --grid-columns-md: 8;       /* 8 columns on medium screens */
+  --grid-columns-lg: 12;      /* 12 columns on large screens */
+  --grid-columns-xl: 12;      /* 12 columns on extra large screens */
+  --grid-columns-2xl: 12;     /* 12 columns on 2x large screens */
+}
+
+/* ===== CONTAINER UTILITIES ===== */
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--spacing-container-sm);
+  padding-right: var(--spacing-container-sm);
+}
+
+/* Container responsive behavior */
+@media (min-width: 480px) {
+  .container {
+    max-width: var(--container-sm);
+    padding-left: var(--spacing-container-md);
+    padding-right: var(--spacing-container-md);
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: var(--container-md);
+    padding-left: var(--spacing-container-lg);
+    padding-right: var(--spacing-container-lg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: var(--container-lg);
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: var(--container-xl);
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: var(--container-2xl);
+  }
+}
+
+/* ===== CONTENT WIDTH UTILITIES ===== */
+
+.content-narrow {
+  max-width: var(--content-width-narrow);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-medium {
+  max-width: var(--content-width-medium);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-wide {
+  max-width: var(--content-width-wide);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-full {
+  max-width: var(--content-width-full);
+}
+
+/* ===== RESPONSIVE GRID SYSTEM ===== */
+
+.grid {
+  display: grid;
+  gap: var(--spacing-grid-md);
+}
+
+/* Grid columns by breakpoint */
+.grid-xs-4 {
+  grid-template-columns: repeat(var(--grid-columns-xs), 1fr);
+}
+
+@media (min-width: 480px) {
+  .grid-sm-6 {
+    grid-template-columns: repeat(var(--grid-columns-sm), 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-md-8 {
+    grid-template-columns: repeat(var(--grid-columns-md), 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-lg-12 {
+    grid-template-columns: repeat(var(--grid-columns-lg), 1fr);
+  }
+}
+
+/* ===== RESPONSIVE VISIBILITY UTILITIES ===== */
+
+/* Hidden on specific breakpoints */
+.hidden-xs {
+  display: none;
+}
+
+@media (min-width: 480px) {
+  .hidden-xs {
+    display: block;
+  }
+  .hidden-sm {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .hidden-sm {
+    display: block;
+  }
+  .hidden-md {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hidden-md {
+    display: block;
+  }
+  .hidden-lg {
+    display: none;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hidden-lg {
+    display: block;
+  }
+  .hidden-xl {
+    display: none;
+  }
+}
+
+@media (min-width: 1536px) {
+  .hidden-xl {
+    display: block;
+  }
+  .hidden-2xl {
+    display: none;
+  }
+}
+
+/* Show only on specific breakpoints */
+.show-xs-only {
+  display: block;
+}
+
+@media (min-width: 480px) {
+  .show-xs-only {
+    display: none;
+  }
+}
+
+.show-sm-only {
+  display: none;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .show-sm-only {
+    display: block;
+  }
+}
+
+.show-md-only {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .show-md-only {
+    display: block;
+  }
+}
+
+.show-lg-only {
+  display: none;
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .show-lg-only {
+    display: block;
+  }
+}
+
+.show-xl-only {
+  display: none;
+}
+
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .show-xl-only {
+    display: block;
+  }
+}
+
+.show-2xl-only {
+  display: none;
+}
+
+@media (min-width: 1536px) {
+  .show-2xl-only {
+    display: block;
+  }
+}
+
+/* ===== RESPONSIVE TEXT UTILITIES ===== */
+
+/* Text alignment */
+.text-left-xs { text-align: left; }
+.text-center-xs { text-align: center; }
+.text-right-xs { text-align: right; }
+
+@media (min-width: 480px) {
+  .text-left-sm { text-align: left; }
+  .text-center-sm { text-align: center; }
+  .text-right-sm { text-align: right; }
+}
+
+@media (min-width: 768px) {
+  .text-left-md { text-align: left; }
+  .text-center-md { text-align: center; }
+  .text-right-md { text-align: right; }
+}
+
+@media (min-width: 1024px) {
+  .text-left-lg { text-align: left; }
+  .text-center-lg { text-align: center; }
+  .text-right-lg { text-align: right; }
+}
+
+/* ===== RESPONSIVE FLEXBOX UTILITIES ===== */
+
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.flex-row { flex-direction: row; }
+
+@media (min-width: 480px) {
+  .flex-col-sm { flex-direction: column; }
+  .flex-row-sm { flex-direction: row; }
+}
+
+@media (min-width: 768px) {
+  .flex-col-md { flex-direction: column; }
+  .flex-row-md { flex-direction: row; }
+}
+
+@media (min-width: 1024px) {
+  .flex-col-lg { flex-direction: column; }
+  .flex-row-lg { flex-direction: row; }
+}
+
+/* ===== RESPONSIVE SPACING UTILITIES ===== */
+
+/* Responsive margins */
+@media (min-width: 480px) {
+  .m-sm-0 { margin: var(--spacing-0); }
+  .m-sm-2 { margin: var(--spacing-2); }
+  .m-sm-4 { margin: var(--spacing-4); }
+  .m-sm-6 { margin: var(--spacing-6); }
+  .m-sm-8 { margin: var(--spacing-8); }
+}
+
+@media (min-width: 768px) {
+  .m-md-0 { margin: var(--spacing-0); }
+  .m-md-2 { margin: var(--spacing-2); }
+  .m-md-4 { margin: var(--spacing-4); }
+  .m-md-6 { margin: var(--spacing-6); }
+  .m-md-8 { margin: var(--spacing-8); }
+  .m-md-12 { margin: var(--spacing-12); }
+}
+
+@media (min-width: 1024px) {
+  .m-lg-0 { margin: var(--spacing-0); }
+  .m-lg-2 { margin: var(--spacing-2); }
+  .m-lg-4 { margin: var(--spacing-4); }
+  .m-lg-6 { margin: var(--spacing-6); }
+  .m-lg-8 { margin: var(--spacing-8); }
+  .m-lg-12 { margin: var(--spacing-12); }
+  .m-lg-16 { margin: var(--spacing-16); }
+}
+
+/* Responsive padding */
+@media (min-width: 480px) {
+  .p-sm-0 { padding: var(--spacing-0); }
+  .p-sm-2 { padding: var(--spacing-2); }
+  .p-sm-4 { padding: var(--spacing-4); }
+  .p-sm-6 { padding: var(--spacing-6); }
+  .p-sm-8 { padding: var(--spacing-8); }
+}
+
+@media (min-width: 768px) {
+  .p-md-0 { padding: var(--spacing-0); }
+  .p-md-2 { padding: var(--spacing-2); }
+  .p-md-4 { padding: var(--spacing-4); }
+  .p-md-6 { padding: var(--spacing-6); }
+  .p-md-8 { padding: var(--spacing-8); }
+  .p-md-12 { padding: var(--spacing-12); }
+}
+
+@media (min-width: 1024px) {
+  .p-lg-0 { padding: var(--spacing-0); }
+  .p-lg-2 { padding: var(--spacing-2); }
+  .p-lg-4 { padding: var(--spacing-4); }
+  .p-lg-6 { padding: var(--spacing-6); }
+  .p-lg-8 { padding: var(--spacing-8); }
+  .p-lg-12 { padding: var(--spacing-12); }
+  .p-lg-16 { padding: var(--spacing-16); }
+}
