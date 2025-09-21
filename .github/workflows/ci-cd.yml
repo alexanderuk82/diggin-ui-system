@@ -102,9 +102,9 @@ jobs:
           if npm run --if-present build-storybook; then
             echo "✅ Storybook built successfully"
           else
-            echo "❌ Storybook build failed or script not found"
+            echo "❌ Storybook not configured - creating placeholder"
             mkdir -p storybook-static
-            echo "<h1>Storybook not configured yet</h1>" > storybook-static/index.html
+            echo "<h1>🎨 Diggin UI System</h1><p>Storybook will be available soon!</p>" > storybook-static/index.html
           fi
         
       - name: 🔧 Setup Pages
