@@ -40,7 +40,7 @@ function App() {
 
 ## 📚 Documentation
 
-Visit our [Storybook documentation](https://your-username.github.io/diggin-ui-system) to explore all components and their variants.
+Visit our [Storybook documentation](https://alexanderuk82.github.io/diggin-ui-system/) to explore all components and their variants.
 
 ## 🛠️ Development
 
