@@ -1,0 +1,264 @@
+/* Button Component Styles */
+/* Using only design tokens from our token system */
+
+/* Icon animations */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon-spinner {
+  animation: spin 1s linear infinite;
+}
+
+.btn {
+  /* Base styles */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-primary);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-none);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all var(--duration-200) var(--ease-out);
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  
+  /* Focus styles for accessibility */
+  &:focus {
+    outline: none;
+    box-shadow: var(--shadow-focus-primary);
+  }
+  
+  &:focus:not(:focus-visible) {
+    box-shadow: none;
+  }
+  
+  &:focus-visible {
+    box-shadow: var(--shadow-focus-primary);
+  }
+}
+
+/* Size variants */
+.btn--small {
+  min-height: 30px; /* Proporcionalmente más pequeño */
+  padding: 8px 28px; /* Proporcional al large */
+  gap: 4px; /* Proporcionalmente menor */
+  font-size: 14px; /* Tamaño estándar small */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.32;
+  border-radius: 4px; /* Mismo radius que Figma */
+}
+
+.btn--medium {
+  min-height: 36px; /* Proporcionalmente más pequeño que large */
+  padding: 10px 40px; /* Proporcional al large */
+  gap: 6px; /* Proporcionalmente menor */
+  font-size: 16px; /* Tamaño estándar medium */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 1.32;
+  border-radius: 4px; /* Mismo radius que Figma */
+}
+
+.btn--large {
+  min-height: 42px; /* Altura calculada desde padding + font */
+  padding: 12px 52px; /* Valores exactos de Figma */
+  gap: 8px; /* Gap exacto de Figma */
+  font-size: 18px; /* Font size exacto de Figma */
+  font-family: 'Poppins', sans-serif; /* Font family de Figma */
+  font-weight: 400; /* Regular weight de Figma */
+  line-height: 1.32; /* Line height de Figma */
+  border-radius: 4px; /* Border radius exacto de Figma */
+}
+
+/* Primary variant (Main in Figma) */
+.btn--primary {
+  background-color: #1D4ED8; /* Corporate/blue/main exacto de Figma */
+  color: #FFFFFF; /* Grayscale/White exacto de Figma */
+  border: none; /* Sin border como en Figma */
+  box-shadow: var(--shadow-sm);
+  
+  &:hover:not(:disabled) {
+    background-color: #1E40AF; /* Hover state más oscuro */
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+  
+  &:active:not(:disabled) {
+    background-color: #1E3A8A; /* Active state más oscuro */
+    box-shadow: var(--shadow-sm);
+    transform: translateY(0);
+  }
+}
+
+/* Secondary variant */
+.btn--secondary {
+  background-color: var(--color-secondary-500);
+  color: var(--color-text-primary-inverse);
+  box-shadow: var(--shadow-sm);
+  
+  &:hover:not(:disabled) {
+    background-color: var(--color-secondary-600);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+  
+  &:active:not(:disabled) {
+    background-color: var(--color-secondary-700);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(0);
+  }
+}
+
+/* Text variant */
+.btn--text {
+  background-color: transparent;
+  color: var(--color-azure-600);
+  box-shadow: none;
+  
+  &:hover:not(:disabled) {
+    background-color: var(--color-azure-50);
+    color: var(--color-azure-700);
+  }
+  
+  &:active:not(:disabled) {
+    background-color: var(--color-azure-100);
+    color: var(--color-azure-800);
+  }
+}
+
+/* Disabled state */
+.btn--disabled,
+.btn:disabled {
+  background-color: var(--color-background-disabled) !important;
+  color: var(--color-text-disabled) !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+  transform: none !important;
+  
+  &.btn--text {
+    background-color: transparent !important;
+    color: var(--color-text-disabled) !important;
+  }
+}
+
+/* Loading state */
+.btn--loading {
+  pointer-events: none;
+  position: relative;
+}
+
+/* Full width */
+.btn--full-width {
+  width: 100%;
+}
+
+/* Icon styles */
+.btn__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.btn__icon--left {
+  margin-right: 0;
+}
+
+.btn__icon--right {
+  margin-left: 0;
+}
+
+.btn__content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Spinner animation */
+.btn__spinner {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: var(--radius-full);
+  animation: btn-spin var(--duration-1000) linear infinite;
+}
+
+@keyframes btn-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .btn {
+    border: 2px solid;
+  }
+  
+  .btn--primary {
+    border-color: var(--color-azure-600);
+  }
+  
+  .btn--secondary {
+    border-color: var(--color-secondary-500);
+  }
+  
+  .btn--text {
+    border-color: var(--color-azure-600);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
+  
+  .btn__spinner {
+    animation: none;
+  }
+  
+  .btn:hover:not(:disabled) {
+    transform: none;
+  }
+}
+
+/* Touch device optimizations */
+@media (pointer: coarse) {
+  .btn--small {
+    min-height: 44px; /* Ensure minimum 44px touch target */
+    padding: var(--spacing-2) var(--spacing-3);
+  }
+}
+
+/* Button Icon Container */
+.btn-icon-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Storybook Demo Styles */
+.storybook-demo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.storybook-demo-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}

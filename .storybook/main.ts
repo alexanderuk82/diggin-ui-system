@@ -16,6 +16,9 @@ const config: StorybookConfig = {
     name: '@storybook/react-vite',
     options: {},
   },
+  core: {
+    builder: '@storybook/builder-vite',
+  },
   docs: {
     defaultName: 'Documentation',
   },
@@ -26,6 +29,14 @@ const config: StorybookConfig = {
       shouldExtractLiteralValuesFromEnum: true,
       propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
     },
+  },
+  viteFinal: async (config) => {
+    config.resolve = config.resolve || {};
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': '/src',
+    };
+    return config;
   },
 };
 

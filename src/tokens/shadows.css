@@ -15,30 +15,29 @@
   --shadow-color-warning: 245, 158, 11;         /* Warning amber */
   --shadow-color-error: 239, 68, 68;            /* Error red */
   
-  /* ===== ELEVATION SHADOWS ===== */
-  
-  /* Level 0 - No elevation */
+  /* ===== ELEVATION SHADOWS (Clear Levels) ===== */
+  /* Level 0 - No elevation - Flat elements */
   --shadow-none: none;
   
-  /* Level 1 - Minimal elevation (cards, buttons) */
-  --shadow-xs: 0 1px 2px 0 rgba(var(--shadow-color-primary), 0.05);
-  --shadow-sm: 0 1px 3px 0 rgba(var(--shadow-color-primary), 0.1), 
-               0 1px 2px -1px rgba(var(--shadow-color-primary), 0.1);
+  /* Level 1 - Subtle depth - 2px blur */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  --shadow-sm-px: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
   
-  /* Level 2 - Low elevation (dropdowns, tooltips) */
-  --shadow-md: 0 4px 6px -1px rgba(var(--shadow-color-primary), 0.1), 
-               0 2px 4px -2px rgba(var(--shadow-color-primary), 0.1);
+  /* Level 2 - Light elevation - 4px blur */
+  --shadow-md: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md-px: 0px 2px 4px 0px rgba(0, 0, 0, 0.1), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
   
-  /* Level 3 - Medium elevation (modals, popovers) */
-  --shadow-lg: 0 10px 15px -3px rgba(var(--shadow-color-primary), 0.1), 
-               0 4px 6px -4px rgba(var(--shadow-color-primary), 0.1);
+  /* Level 3 - Medium elevation - 8px blur */
+  --shadow-lg: 0 4px 8px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+  --shadow-lg-px: 0px 4px 8px 0px rgba(0, 0, 0, 0.12), 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
   
-  /* Level 4 - High elevation (overlays) */
-  --shadow-xl: 0 20px 25px -5px rgba(var(--shadow-color-primary), 0.1), 
-               0 8px 10px -6px rgba(var(--shadow-color-primary), 0.1);
+  /* Level 4 - High elevation - 16px blur */
+  --shadow-xl: 0 8px 16px 0 rgba(0, 0, 0, 0.15), 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  --shadow-xl-px: 0px 8px 16px 0px rgba(0, 0, 0, 0.15), 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
   
-  /* Level 5 - Maximum elevation (drawers, main modals) */
-  --shadow-2xl: 0 25px 50px -12px rgba(var(--shadow-color-primary), 0.25);
+  /* Level 5 - Maximum elevation - 24px blur */
+  --shadow-2xl: 0 12px 24px 0 rgba(0, 0, 0, 0.18), 0 6px 12px 0 rgba(0, 0, 0, 0.12);
+  --shadow-2xl-px: 0px 12px 24px 0px rgba(0, 0, 0, 0.18), 0px 6px 12px 0px rgba(0, 0, 0, 0.12);
   
   /* ===== INNER SHADOWS ===== */
   --shadow-inner: inset 0 2px 4px 0 rgba(var(--shadow-color-primary), 0.05);
@@ -46,11 +45,18 @@
   --shadow-inner-lg: inset 0 8px 16px 0 rgba(var(--shadow-color-primary), 0.15);
   
   /* ===== FOCUS SHADOWS ===== */
-  --shadow-focus-primary: 0 0 0 3px rgba(var(--shadow-color-brand), 0.1);
-  --shadow-focus-secondary: 0 0 0 3px rgba(var(--shadow-color-secondary), 0.1);
-  --shadow-focus-success: 0 0 0 3px rgba(var(--shadow-color-success), 0.1);
-  --shadow-focus-warning: 0 0 0 3px rgba(var(--shadow-color-warning), 0.1);
-  --shadow-focus-error: 0 0 0 3px rgba(var(--shadow-color-error), 0.1);
+  --shadow-focus-primary: 0 0 0 3px rgba(39, 61, 172, 0.2);
+  --shadow-focus-secondary: 0 0 0 3px rgba(54, 194, 207, 0.2);
+  --shadow-focus-success: 0 0 0 3px rgba(34, 197, 94, 0.2);
+  --shadow-focus-warning: 0 0 0 3px rgba(245, 158, 11, 0.2);
+  --shadow-focus-error: 0 0 0 3px rgba(239, 68, 68, 0.2);
+  
+  /* Focus shadows with PX values */
+  --shadow-focus-primary-px: 0px 0px 0px 3px rgba(39, 61, 172, 0.2);
+  --shadow-focus-secondary-px: 0px 0px 0px 3px rgba(54, 194, 207, 0.2);
+  --shadow-focus-success-px: 0px 0px 0px 3px rgba(34, 197, 94, 0.2);
+  --shadow-focus-warning-px: 0px 0px 0px 3px rgba(245, 158, 11, 0.2);
+  --shadow-focus-error-px: 0px 0px 0px 3px rgba(239, 68, 68, 0.2);
   
   /* ===== GLOW EFFECTS ===== */
   --shadow-glow-primary: 0 0 20px rgba(var(--shadow-color-brand), 0.15);
@@ -58,34 +64,27 @@
   --shadow-glow-warning: 0 0 20px rgba(var(--shadow-color-warning), 0.15);
   --shadow-glow-error: 0 0 20px rgba(var(--shadow-color-error), 0.15);
   
-  /* ===== SEMANTIC SHADOWS ===== */
-  
+  /* ===== SEMANTIC SHADOWS (Soft Grid) ===== */
   /* Component Shadows */
-  --shadow-button: var(--shadow-xs);
-  --shadow-button-hover: var(--shadow-sm);
+  --shadow-button: var(--shadow-sm);
+  --shadow-button-hover: var(--shadow-md);
   --shadow-button-focus: var(--shadow-focus-primary);
-  
-  --shadow-card: var(--shadow-sm);
-  --shadow-card-hover: var(--shadow-md);
-  
-  --shadow-input: var(--shadow-inner);
+  --shadow-card: var(--shadow-md);
+  --shadow-card-hover: var(--shadow-lg);
+  --shadow-input: var(--shadow-sm);
   --shadow-input-focus: var(--shadow-focus-primary);
-  
   --shadow-dropdown: var(--shadow-lg);
-  --shadow-modal: var(--shadow-2xl);
+  --shadow-modal: var(--shadow-xl);
   --shadow-tooltip: var(--shadow-md);
   --shadow-popover: var(--shadow-lg);
-  
   /* Navigation Shadows */
   --shadow-navbar: var(--shadow-sm);
   --shadow-sidebar: var(--shadow-lg);
-  --shadow-header: var(--shadow-xs);
-  
+  --shadow-header: var(--shadow-sm);
   /* Interactive Shadows */
   --shadow-hover: var(--shadow-md);
-  --shadow-active: var(--shadow-inner);
-  --shadow-selected: var(--shadow-inner-md);
-  
+  --shadow-active: var(--shadow-sm);
+  --shadow-selected: var(--shadow-md);
   /* Notification Shadows */
   --shadow-notification: var(--shadow-lg);
   --shadow-toast: var(--shadow-md);

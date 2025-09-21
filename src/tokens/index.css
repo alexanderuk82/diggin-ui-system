@@ -13,6 +13,9 @@
 @import './spacing.css';
 @import './breakpoints.css';
 @import './shadows.css';
+@import './border-radius.css';
+@import './animations.css';
+@import './z-index.css';
 
 /* ===== GLOBAL STYLES ===== */
 

@@ -101,56 +101,83 @@ export default meta;
 export const ColorShowcase = () => {
   const colorPalettes = [
     {
-      name: 'Primary (Blue)',
+      name: 'Corporate Colors',
       colors: [
-        { name: '50', value: 'var(--color-primary-50)', hex: '#eff6ff' },
-        { name: '100', value: 'var(--color-primary-100)', hex: '#dbeafe' },
-        { name: '200', value: 'var(--color-primary-200)', hex: '#bfdbfe' },
-        { name: '300', value: 'var(--color-primary-300)', hex: '#93c5fd' },
-        { name: '400', value: 'var(--color-primary-400)', hex: '#60a5fa' },
-        { name: '500', value: 'var(--color-primary-500)', hex: '#3b82f6' },
-        { name: '600', value: 'var(--color-primary-600)', hex: '#2563eb' },
-        { name: '700', value: 'var(--color-primary-700)', hex: '#1d4ed8' },
-        { name: '800', value: 'var(--color-primary-800)', hex: '#1e40af' },
-        { name: '900', value: 'var(--color-primary-900)', hex: '#1e3a8a' },
-        { name: '950', value: 'var(--color-primary-950)', hex: '#172554' },
+        { name: 'Azure', value: 'var(--color-azure-500)', token: '--color-azure-500' },
+        { name: 'Secondary', value: 'var(--color-secondary-500)', token: '--color-secondary-500' },
       ]
     },
     {
-      name: 'Secondary (Slate)',
+      name: 'Emerald Shades',
       colors: [
-        { name: '50', value: 'var(--color-secondary-50)', hex: '#f8fafc' },
-        { name: '100', value: 'var(--color-secondary-100)', hex: '#f1f5f9' },
-        { name: '200', value: 'var(--color-secondary-200)', hex: '#e2e8f0' },
-        { name: '300', value: 'var(--color-secondary-300)', hex: '#cbd5e1' },
-        { name: '400', value: 'var(--color-secondary-400)', hex: '#94a3b8' },
-        { name: '500', value: 'var(--color-secondary-500)', hex: '#64748b' },
-        { name: '600', value: 'var(--color-secondary-600)', hex: '#475569' },
-        { name: '700', value: 'var(--color-secondary-700)', hex: '#334155' },
-        { name: '800', value: 'var(--color-secondary-800)', hex: '#1e293b' },
-        { name: '900', value: 'var(--color-secondary-900)', hex: '#0f172a' },
-        { name: '950', value: 'var(--color-secondary-950)', hex: '#020617' },
+        { name: 'Emerald.50', value: 'var(--color-emerald-50)', token: '--color-emerald-50' },
+        { name: 'Emerald.100', value: 'var(--color-emerald-100)', token: '--color-emerald-100' },
+        { name: 'Emerald.200', value: 'var(--color-emerald-200)', token: '--color-emerald-200' },
+        { name: 'Emerald.300', value: 'var(--color-emerald-300)', token: '--color-emerald-300' },
+        { name: 'Emerald.400', value: 'var(--color-emerald-400)', token: '--color-emerald-400' },
+        { name: 'Emerald.500', value: 'var(--color-emerald-500)', token: '--color-emerald-500' },
+        { name: 'Emerald.600', value: 'var(--color-emerald-600)', token: '--color-emerald-600' },
+        { name: 'Emerald.700', value: 'var(--color-emerald-700)', token: '--color-emerald-700' },
+        { name: 'Emerald.800', value: 'var(--color-emerald-800)', token: '--color-emerald-800' },
+        { name: 'Emerald.900', value: 'var(--color-emerald-900)', token: '--color-emerald-900' },
+      ]
+    },
+    {
+      name: 'Azure Shades',
+      colors: [
+        { name: 'Azure.50', value: 'var(--color-azure-50)', token: '--color-azure-50' },
+        { name: 'Azure.100', value: 'var(--color-azure-100)', token: '--color-azure-100' },
+        { name: 'Azure.200', value: 'var(--color-azure-200)', token: '--color-azure-200' },
+        { name: 'Azure.300', value: 'var(--color-azure-300)', token: '--color-azure-300' },
+        { name: 'Azure.400', value: 'var(--color-azure-400)', token: '--color-azure-400' },
+        { name: 'Azure.500', value: 'var(--color-azure-500)', token: '--color-azure-500' },
+        { name: 'Azure.600', value: 'var(--color-azure-600)', token: '--color-azure-600' },
+        { name: 'Azure.700', value: 'var(--color-azure-700)', token: '--color-azure-700' },
+        { name: 'Azure.800', value: 'var(--color-azure-800)', token: '--color-azure-800' },
+        { name: 'Azure.900', value: 'var(--color-azure-900)', token: '--color-azure-900' },
       ]
     },
     {
       name: 'Semantic Colors',
       colors: [
-        { name: 'Success', value: 'var(--color-success-500)', hex: '#22c55e' },
-        { name: 'Warning', value: 'var(--color-warning-500)', hex: '#f59e0b' },
-        { name: 'Error', value: 'var(--color-error-500)', hex: '#ef4444' },
-        { name: 'Info', value: 'var(--color-info-500)', hex: '#06b6d4' },
+        { name: 'Success', value: 'var(--color-success-500)', token: '--color-success-500' },
+        { name: 'Warning', value: 'var(--color-warning-500)', token: '--color-warning-500' },
+        { name: 'Error', value: 'var(--color-error-500)', token: '--color-error-500' },
+        { name: 'Info', value: 'var(--color-info-500)', token: '--color-info-500' },
       ]
     },
   ];
 
+  const backgroundColors = [
+    { name: 'Primary', value: 'var(--color-background-primary)', token: '--color-background-primary' },
+    { name: 'Secondary', value: 'var(--color-background-secondary)', token: '--color-background-secondary' },
+    { name: 'Tertiary', value: 'var(--color-background-tertiary)', token: '--color-background-tertiary' },
+    { name: 'Inverse', value: 'var(--color-background-inverse)', token: '--color-background-inverse' },
+  ];
+
+  const textColors = [
+    { name: 'Primary', value: 'var(--color-text-primary)', token: '--color-text-primary' },
+    { name: 'Secondary', value: 'var(--color-text-secondary)', token: '--color-text-secondary' },
+    { name: 'Tertiary', value: 'var(--color-text-tertiary)', token: '--color-text-tertiary' },
+    { name: 'Inverse', value: 'var(--color-text-inverse)', token: '--color-text-inverse' },
+  ];
+
+  const borderColors = [
+    { name: 'Primary', value: 'var(--color-border-primary)', token: '--color-border-primary' },
+    { name: 'Secondary', value: 'var(--color-border-secondary)', token: '--color-border-secondary' },
+    { name: 'Tertiary', value: 'var(--color-border-tertiary)', token: '--color-border-tertiary' },
+    { name: 'Focus', value: 'var(--color-border-focus)', token: '--color-border-focus' },
+  ];
+
   return (
     <div style={{ fontFamily: 'var(--font-family-primary)' }}>
+      {/* Color Palettes */}
       {colorPalettes.map((palette) => (
-        <div key={palette.name} style={{ marginBottom: '2rem' }}>
+        <div key={palette.name} style={{ marginBottom: 'var(--spacing-8)' }}>
           <h3 style={{ 
             fontSize: 'var(--font-size-lg)', 
             fontWeight: 'var(--font-weight-semibold)',
-            marginBottom: '1rem',
+            marginBottom: 'var(--spacing-4)',
             color: 'var(--color-text-primary)'
           }}>
             {palette.name}
@@ -158,25 +185,26 @@ export const ColorShowcase = () => {
           <div style={{ 
             display: 'grid', 
             gridTemplateColumns: 'repeat(auto-fit, minmax(120px, 1fr))', 
-            gap: '0.5rem' 
+            gap: 'var(--spacing-2)' 
           }}>
             {palette.colors.map((color) => (
               <div key={color.name} style={{
                 backgroundColor: color.value,
                 borderRadius: 'var(--radius-lg)',
-                padding: '1rem',
+                padding: 'var(--spacing-6)',
                 textAlign: 'center',
                 border: '1px solid var(--color-border-secondary)',
-                minHeight: '80px',
+                minHeight: 'var(--spacing-20)',
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'flex-end'
+                justifyContent: 'flex-end',
+                boxShadow: 'var(--shadow-sm)'
               }}>
                 <div style={{
                   fontSize: 'var(--font-size-sm)',
                   fontWeight: 'var(--font-weight-medium)',
                   color: color.name.includes('50') || color.name.includes('100') || color.name.includes('200') || color.name === 'Success' || color.name === 'Warning' || color.name === 'Info' ? '#000' : '#fff',
-                  marginBottom: '0.25rem'
+                  marginBottom: 'var(--spacing-1)'
                 }}>
                   {color.name}
                 </div>
@@ -185,13 +213,89 @@ export const ColorShowcase = () => {
                   color: color.name.includes('50') || color.name.includes('100') || color.name.includes('200') || color.name === 'Success' || color.name === 'Warning' || color.name === 'Info' ? '#666' : '#ccc',
                   fontFamily: 'var(--font-family-mono)'
                 }}>
-                  {color.hex}
+                  {color.token}
                 </div>
               </div>
             ))}
           </div>
         </div>
       ))}
+
+      {/* Background Colors */}
+      <div style={{ marginBottom: 'var(--spacing-8)' }}>
+        <h3 style={{ fontSize: 'var(--font-size-lg)', fontWeight: 'var(--font-weight-semibold)', marginBottom: 'var(--spacing-4)' }}>Background Colors</h3>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 'var(--spacing-4)' }}>
+          {backgroundColors.map((bg) => (
+            <div key={bg.name} style={{
+              backgroundColor: bg.value,
+              border: '2px solid var(--color-border-secondary)',
+              borderRadius: 'var(--radius-lg)',
+              padding: 'var(--spacing-6)',
+              textAlign: 'center',
+              minHeight: '100px',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'center'
+            }}>
+              <div style={{ fontSize: 'var(--font-size-sm)', fontWeight: 'var(--font-weight-medium)', color: 'var(--color-text-primary)', marginBottom: 'var(--spacing-1)' }}>
+                {bg.name} Background
+              </div>
+              <code style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)', fontFamily: 'var(--font-family-mono)' }}>
+                {bg.token}
+              </code>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Text Colors */}
+      <div style={{ marginBottom: 'var(--spacing-8)' }}>
+        <h3 style={{ fontSize: 'var(--font-size-lg)', fontWeight: 'var(--font-weight-semibold)', marginBottom: 'var(--spacing-4)' }}>Text Colors</h3>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 'var(--spacing-4)' }}>
+          {textColors.map((text) => (
+            <div key={text.name} style={{
+              backgroundColor: 'var(--color-background-secondary)',
+              border: '1px solid var(--color-border-secondary)',
+              borderRadius: 'var(--radius-lg)',
+              padding: 'var(--spacing-6)',
+              textAlign: 'center'
+            }}>
+              <div style={{ color: text.value, fontSize: 'var(--font-size-lg)', fontWeight: 'var(--font-weight-medium)', marginBottom: 'var(--spacing-2)' }}>
+                {text.name} Text
+              </div>
+              <div style={{ fontSize: 'var(--font-size-sm)', color: text.value, marginBottom: 'var(--spacing-2)' }}>
+                The quick brown fox jumps over the lazy dog
+              </div>
+              <code style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-tertiary)', fontFamily: 'var(--font-family-mono)' }}>
+                {text.token}
+              </code>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Border Colors */}
+      <div style={{ marginBottom: 'var(--spacing-8)' }}>
+        <h3 style={{ fontSize: 'var(--font-size-lg)', fontWeight: 'var(--font-weight-semibold)', marginBottom: 'var(--spacing-4)' }}>Border Colors</h3>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 'var(--spacing-4)' }}>
+          {borderColors.map((border) => (
+            <div key={border.name} style={{
+              backgroundColor: 'var(--color-background-secondary)',
+              border: `2px solid ${border.value}`,
+              borderRadius: 'var(--radius-lg)',
+              padding: 'var(--spacing-6)',
+              textAlign: 'center'
+            }}>
+              <div style={{ fontSize: 'var(--font-size-sm)', fontWeight: 'var(--font-weight-medium)', color: 'var(--color-text-primary)', marginBottom: 'var(--spacing-1)' }}>
+                {border.name} Border
+              </div>
+              <code style={{ fontSize: 'var(--font-size-xs)', color: 'var(--color-text-secondary)', fontFamily: 'var(--font-family-mono)' }}>
+                {border.token}
+              </code>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

@@ -2,105 +2,111 @@
    🎨 DESIGN TOKENS - COLORS
    ================================
    
-   Base color system for the design system
+   Corporate color system aligned with brand requirements
    Following WCAG AA contrast requirements
+   All colors using HSL format for better control
    ================================ */
 
 :root {
-  /* ===== PRIMARY COLORS ===== */
-  --color-primary-50: #f0f9ff;
-  --color-primary-100: #e0f2fe;
-  --color-primary-200: #bae6fd;
-  --color-primary-300: #7dd3fc;
-  --color-primary-400: #38bdf8;
-  --color-primary-500: #0ea5e9;
-  --color-primary-600: #0284c7;
-  --color-primary-700: #0369a1;
-  --color-primary-800: #075985;
-  --color-primary-900: #0c4a6e;
-  --color-primary-950: #082f49;
+  /* ===== CORPORATE BRAND COLORS ===== */
+  /* Azure - Primary Brand Color */
+  --color-azure-500: hsl(225, 73%, 57%); /* #273DAC - Main brand color */
+  
+  /* Secondary - Teal Brand Color */
+  --color-secondary-500: hsl(175, 50%, 57%); /* #36C2CF - Secondary brand */
 
-  /* ===== SECONDARY COLORS ===== */
-  --color-secondary-50: #f8fafc;
-  --color-secondary-100: #f1f5f9;
-  --color-secondary-200: #e2e8f0;
-  --color-secondary-300: #cbd5e1;
-  --color-secondary-400: #94a3b8;
-  --color-secondary-500: #64748b;
-  --color-secondary-600: #475569;
-  --color-secondary-700: #334155;
-  --color-secondary-800: #1e293b;
-  --color-secondary-900: #0f172a;
+  /* ===== EMERALD COLOR SCALE ===== */
+  --color-emerald-50: hsl(152, 52%, 95%); /* #F2FBF8 */
+  --color-emerald-100: hsl(152, 52%, 86%); /* #C4F3ED */
+  --color-emerald-200: hsl(151, 57%, 74%); /* #B3F0E8 */
+  --color-emerald-300: hsl(150, 62%, 67%); /* #92E9DE */
+  --color-emerald-400: hsl(149, 67%, 60%); /* #70E2D3 */
+  --color-emerald-500: hsl(148, 72%, 53%); /* #2DD4BF */
+  --color-emerald-600: hsl(175, 55%, 32%); /* #26B2A0 */
+  --color-emerald-700: hsl(177, 60%, 24%); /* #1F9082 */
+  --color-emerald-800: hsl(179, 65%, 19%); /* #176E63 */
+  --color-emerald-900: hsl(181, 70%, 14%); /* #104C45 */
 
-  /* ===== NEUTRAL COLORS ===== */
-  --color-neutral-50: #fafafa;
-  --color-neutral-100: #f5f5f5;
-  --color-neutral-200: #e5e5e5;
-  --color-neutral-300: #d4d4d4;
-  --color-neutral-400: #a3a3a3;
-  --color-neutral-500: #737373;
-  --color-neutral-600: #525252;
-  --color-neutral-700: #404040;
-  --color-neutral-800: #262626;
-  --color-neutral-900: #171717;
-  --color-neutral-950: #0a0a0a;
+  /* ===== AZURE COLOR SCALE ===== */
+  --color-azure-50: hsl(225, 100%, 96%); /* #F0F2FF */
+  --color-azure-100: hsl(225, 100%, 93%); /* #C3C9E8 */
+  --color-azure-200: hsl(224, 73%, 86%); /* #B1B9E1 */
+  --color-azure-300: hsl(223, 57%, 78%); /* #8F9AD4 */
+  --color-azure-400: hsl(222, 52%, 70%); /* #6C7BC7 */
+  --color-azure-500: hsl(225, 73%, 57%); /* #273DAC - Main brand */
+  --color-azure-600: hsl(221, 73%, 40%); /* #213390 */
+  --color-azure-700: hsl(220, 75%, 29%); /* #1B2975 */
+  --color-azure-800: hsl(219, 78%, 18%); /* #142059 */
+  --color-azure-900: hsl(224, 89%, 9%);  /* #0E163E */
 
   /* ===== SEMANTIC COLORS ===== */
-  
   /* Success Colors */
-  --color-success-50: #f0fdf4;
-  --color-success-100: #dcfce7;
-  --color-success-200: #bbf7d0;
-  --color-success-300: #86efac;
-  --color-success-400: #4ade80;
-  --color-success-500: #22c55e;
-  --color-success-600: #16a34a;
-  --color-success-700: #15803d;
-  --color-success-800: #166534;
-  --color-success-900: #14532d;
+  --color-success-50: hsl(142, 78%, 96%);
+  --color-success-100: hsl(141, 78%, 83%);
+  --color-success-200: hsl(141, 76%, 73%);
+  --color-success-300: hsl(141, 67%, 63%);
+  --color-success-400: hsl(141, 67%, 51%);
+  --color-success-500: hsl(142, 71%, 45%);
+  --color-success-600: hsl(142, 76%, 36%);
+  --color-success-700: hsl(142, 72%, 29%);
+  --color-success-800: hsl(143, 64%, 24%);
+  --color-success-900: hsl(144, 61%, 20%);
 
   /* Warning Colors */
-  --color-warning-50: #fefce8;
-  --color-warning-100: #fef9c3;
-  --color-warning-200: #fef08a;
-  --color-warning-300: #fde047;
-  --color-warning-400: #facc15;
-  --color-warning-500: #eab308;
-  --color-warning-600: #ca8a04;
-  --color-warning-700: #a16207;
-  --color-warning-800: #854d0e;
-  --color-warning-900: #713f12;
+  --color-warning-50: hsl(54, 100%, 97%);
+  --color-warning-100: hsl(54, 100%, 88%);
+  --color-warning-200: hsl(54, 97%, 76%);
+  --color-warning-300: hsl(53, 97%, 63%);
+  --color-warning-400: hsl(48, 96%, 53%);
+  --color-warning-500: hsl(45, 87%, 49%);
+  --color-warning-600: hsl(43, 96%, 40%);
+  --color-warning-700: hsl(39, 96%, 32%);
+  --color-warning-800: hsl(35, 92%, 25%);
+  --color-warning-900: hsl(32, 88%, 19%);
 
   /* Error Colors */
-  --color-error-50: #fef2f2;
-  --color-error-100: #fee2e2;
-  --color-error-200: #fecaca;
-  --color-error-300: #fca5a5;
-  --color-error-400: #f87171;
-  --color-error-500: #ef4444;
-  --color-error-600: #dc2626;
-  --color-error-700: #b91c1c;
-  --color-error-800: #991b1b;
-  --color-error-900: #7f1d1d;
+  --color-error-50: hsl(0, 86%, 97%);
+  --color-error-100: hsl(0, 93%, 94%);
+  --color-error-200: hsl(0, 96%, 89%);
+  --color-error-300: hsl(0, 94%, 82%);
+  --color-error-400: hsl(0, 91%, 71%);
+  --color-error-500: hsl(0, 84%, 60%);
+  --color-error-600: hsl(0, 72%, 51%);
+  --color-error-700: hsl(0, 74%, 42%);
+  --color-error-800: hsl(0, 70%, 35%);
+  --color-error-900: hsl(0, 63%, 31%);
 
   /* Info Colors */
-  --color-info-50: #eff6ff;
-  --color-info-100: #dbeafe;
-  --color-info-200: #bfdbfe;
-  --color-info-300: #93c5fd;
-  --color-info-400: #60a5fa;
-  --color-info-500: #3b82f6;
-  --color-info-600: #2563eb;
-  --color-info-700: #1d4ed8;
-  --color-info-800: #1e40af;
-  --color-info-900: #1e3a8a;
+  --color-info-50: hsl(188, 100%, 97%);
+  --color-info-100: hsl(188, 94%, 93%);
+  --color-info-200: hsl(188, 97%, 87%);
+  --color-info-300: hsl(188, 95%, 77%);
+  --color-info-400: hsl(188, 94%, 68%);
+  --color-info-500: hsl(188, 94%, 43%);
+  --color-info-600: hsl(188, 90%, 36%);
+  --color-info-700: hsl(188, 89%, 29%);
+  --color-info-800: hsl(188, 87%, 24%);
+  --color-info-900: hsl(188, 82%, 19%);
+
+  /* ===== NEUTRAL COLORS ===== */
+  --color-neutral-0: hsl(0, 0%, 100%);
+  --color-neutral-50: hsl(210, 20%, 98%);
+  --color-neutral-100: hsl(210, 20%, 96%);
+  --color-neutral-200: hsl(210, 16%, 93%);
+  --color-neutral-300: hsl(210, 13%, 86%);
+  --color-neutral-400: hsl(210, 9%, 65%);
+  --color-neutral-500: hsl(210, 7%, 50%);
+  --color-neutral-600: hsl(210, 9%, 36%);
+  --color-neutral-700: hsl(210, 14%, 28%);
+  --color-neutral-800: hsl(210, 24%, 16%);
+  --color-neutral-900: hsl(210, 36%, 10%);
 
   /* ===== FUNCTIONAL COLORS ===== */
   
   /* Background Colors */
-  --color-background-primary: var(--color-neutral-50);
-  --color-background-secondary: var(--color-neutral-100);
-  --color-background-tertiary: var(--color-neutral-200);
+  --color-background-primary: var(--color-neutral-0);
+  --color-background-secondary: var(--color-neutral-50);
+  --color-background-tertiary: var(--color-neutral-100);
   --color-background-inverse: var(--color-neutral-900);
   
   /* Text Colors */
@@ -113,26 +119,26 @@
   /* Border Colors */
   --color-border-primary: var(--color-neutral-300);
   --color-border-secondary: var(--color-neutral-200);
-  --color-border-focus: var(--color-primary-500);
+  --color-border-focus: var(--color-azure-500);
   --color-border-error: var(--color-error-500);
   --color-border-success: var(--color-success-500);
   
   /* Interactive Colors */
-  --color-interactive-primary: var(--color-primary-600);
-  --color-interactive-primary-hover: var(--color-primary-700);
-  --color-interactive-primary-active: var(--color-primary-800);
-  --color-interactive-secondary: var(--color-secondary-600);
-  --color-interactive-secondary-hover: var(--color-secondary-700);
-  --color-interactive-secondary-active: var(--color-secondary-800);
+  --color-interactive-primary: var(--color-azure-500);
+  --color-interactive-primary-hover: var(--color-azure-600);
+  --color-interactive-primary-active: var(--color-azure-700);
+  --color-interactive-secondary: var(--color-secondary-500);
+  --color-interactive-secondary-hover: var(--color-emerald-600);
+  --color-interactive-secondary-active: var(--color-emerald-700);
   
   /* Focus Colors */
-  --color-focus: var(--color-primary-500);
-  --color-focus-ring: var(--color-primary-500);
+  --color-focus: var(--color-azure-500);
+  --color-focus-ring: var(--color-azure-500);
   
   /* Overlay Colors */
-  --color-overlay-light: rgba(255, 255, 255, 0.8);
-  --color-overlay-dark: rgba(0, 0, 0, 0.5);
-  --color-overlay-backdrop: rgba(0, 0, 0, 0.25);
+  --color-overlay-light: hsla(0, 0%, 100%, 0.8);
+  --color-overlay-dark: hsla(0, 0%, 0%, 0.5);
+  --color-overlay-backdrop: hsla(0, 0%, 0%, 0.25);
 }
 
 /* ===== DARK THEME ===== */

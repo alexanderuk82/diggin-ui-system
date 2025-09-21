@@ -1,0 +1,191 @@
+/* ================================
+   🎬 DESIGN TOKENS - ANIMATIONS
+   ================================
+   
+   Animation system for consistent
+   motion and transitions
+   ================================ */
+
+:root {
+  /* ===== DURATION ===== */
+  
+  /* Fast interactions */
+  --duration-instant: 0ms;
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 350ms;
+  --duration-slower: 500ms;
+  --duration-slowest: 750ms;
+  
+  /* ===== EASING CURVES ===== */
+  
+  /* Standard curves */
+  --ease-linear: cubic-bezier(0, 0, 1, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Custom curves for specific interactions */
+  --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --ease-elastic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-back: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-anticipate: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+  /* ===== SEMANTIC ANIMATIONS ===== */
+  
+  /* Hover states */
+  --transition-hover: all var(--duration-fast) var(--ease-out);
+  --transition-button-hover: transform var(--duration-fast) var(--ease-out);
+  --transition-scale-hover: transform var(--duration-normal) var(--ease-out);
+  
+  /* Focus states */
+  --transition-focus: box-shadow var(--duration-fast) var(--ease-out);
+  --transition-border-focus: border-color var(--duration-fast) var(--ease-out);
+  
+  /* Loading states */
+  --transition-loading: opacity var(--duration-normal) var(--ease-in-out);
+  --transition-skeleton: background-color var(--duration-slow) var(--ease-in-out);
+  
+  /* Modal and overlay transitions */
+  --transition-modal-enter: all var(--duration-normal) var(--ease-out);
+  --transition-modal-exit: all var(--duration-fast) var(--ease-in);
+  --transition-backdrop: opacity var(--duration-normal) var(--ease-out);
+  
+  /* Menu and dropdown transitions */
+  --transition-dropdown: all var(--duration-normal) var(--ease-out);
+  --transition-slide-down: transform var(--duration-normal) var(--ease-out);
+  --transition-slide-up: transform var(--duration-normal) var(--ease-out);
+  
+  /* ===== TRANSFORMS ===== */
+  
+  /* Scale transforms */
+  --scale-hover: scale(1.02);
+  --scale-active: scale(0.98);
+  --scale-button-hover: scale(1.05);
+  --scale-button-active: scale(0.95);
+  
+  /* Translate transforms */
+  --translate-slide-in: translateY(-0.5rem);
+  --translate-slide-out: translateY(0.5rem);
+  --translate-slide-left: translateX(-0.5rem);
+  --translate-slide-right: translateX(0.5rem);
+  
+  /* ===== KEYFRAMES ===== */
+  
+  /* Fade animations */
+  --keyframes-fade-in: fadeIn var(--duration-normal) var(--ease-out) forwards;
+  --keyframes-fade-out: fadeOut var(--duration-fast) var(--ease-in) forwards;
+  
+  /* Slide animations */
+  --keyframes-slide-in-down: slideInDown var(--duration-normal) var(--ease-out) forwards;
+  --keyframes-slide-in-up: slideInUp var(--duration-normal) var(--ease-out) forwards;
+  --keyframes-slide-out-up: slideOutUp var(--duration-fast) var(--ease-in) forwards;
+  --keyframes-slide-out-down: slideOutDown var(--duration-fast) var(--ease-in) forwards;
+  
+  /* Loading animations */
+  --keyframes-pulse: pulse var(--duration-slow) var(--ease-in-out) infinite;
+  --keyframes-bounce: bounce var(--duration-slow) var(--ease-bounce) infinite;
+  --keyframes-spin: spin 1s var(--ease-linear) infinite;
+}
+
+/* ===== KEYFRAME DEFINITIONS ===== */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes bounce {
+  0%, 20%, 53%, 80%, 100% {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+  40%, 43% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -30px, 0);
+  }
+  70% {
+    animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+    transform: translate3d(0, -15px, 0);
+  }
+  90% {
+    transform: translate3d(0, -4px, 0);
+  }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+.animate-fade-in { animation: var(--keyframes-fade-in); }
+.animate-fade-out { animation: var(--keyframes-fade-out); }
+.animate-slide-in-down { animation: var(--keyframes-slide-in-down); }
+.animate-slide-in-up { animation: var(--keyframes-slide-in-up); }
+.animate-slide-out-up { animation: var(--keyframes-slide-out-up); }
+.animate-slide-out-down { animation: var(--keyframes-slide-out-down); }
+.animate-pulse { animation: var(--keyframes-pulse); }
+.animate-bounce { animation: var(--keyframes-bounce); }
+.animate-spin { animation: var(--keyframes-spin); }
+
+.transition-hover { transition: var(--transition-hover); }
+.transition-focus { transition: var(--transition-focus); }
+.transition-loading { transition: var(--transition-loading); }
+.transition-modal { transition: var(--transition-modal-enter); }
+.transition-dropdown { transition: var(--transition-dropdown); }

@@ -113,6 +113,6 @@ export default meta;
  * 
  * ---
  * 
- * *Built with ❤️ by the Diggin team*
+ * *Built with ❤️ by [Alexander B.](https://www.linkedin.com/in/alexandersstudio/)*
  */
 export const Introduction = () => null;

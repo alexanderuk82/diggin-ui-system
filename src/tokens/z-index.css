@@ -1,0 +1,174 @@
+/* ================================
+   📐 DESIGN TOKENS - Z-INDEX
+   ================================
+   
+   Layering system for consistent
+   element stacking order
+   ================================ */
+
+:root {
+  /* ===== BASE LAYERS ===== */
+  
+  /* Negative layers */
+  --z-index-behind: -1;
+  --z-index-background: -10;
+  
+  /* Base layer */
+  --z-index-base: 0;
+  --z-index-auto: auto;
+  
+  /* ===== CONTENT LAYERS ===== */
+  
+  /* Low elevation content */
+  --z-index-content: 1;
+  --z-index-elevated: 10;
+  --z-index-card: 20;
+  
+  /* Interactive elements */
+  --z-index-button: 30;
+  --z-index-form: 40;
+  --z-index-input: 50;
+  
+  /* ===== NAVIGATION LAYERS ===== */
+  
+  /* Sticky elements */
+  --z-index-sticky: 100;
+  --z-index-header: 200;
+  --z-index-navigation: 300;
+  --z-index-sidebar: 400;
+  
+  /* ===== OVERLAY LAYERS ===== */
+  
+  /* Dropdown and menu layers */
+  --z-index-dropdown: 500;
+  --z-index-menu: 600;
+  --z-index-popover: 700;
+  --z-index-tooltip: 800;
+  
+  /* ===== MODAL LAYERS ===== */
+  
+  /* Modal system */
+  --z-index-backdrop: 900;
+  --z-index-modal: 1000;
+  --z-index-modal-content: 1010;
+  
+  /* ===== OVERLAY SYSTEM ===== */
+  
+  /* Loading and blocking overlays */
+  --z-index-loading: 1100;
+  --z-index-overlay: 1200;
+  --z-index-blocking: 1300;
+  
+  /* ===== NOTIFICATION LAYERS ===== */
+  
+  /* Alerts and notifications */
+  --z-index-notification: 1400;
+  --z-index-toast: 1500;
+  --z-index-alert: 1600;
+  
+  /* ===== MAXIMUM LAYERS ===== */
+  
+  /* Critical system elements */
+  --z-index-debug: 9990;
+  --z-index-emergency: 9999;
+  --z-index-maximum: 2147483647; /* Maximum safe integer */
+}
+
+/* ===== SEMANTIC Z-INDEX GROUPS ===== */
+
+:root {
+  /* Layout layers */
+  --z-layout-background: var(--z-index-background);
+  --z-layout-base: var(--z-index-base);
+  --z-layout-content: var(--z-index-content);
+  --z-layout-elevated: var(--z-index-elevated);
+  
+  /* Navigation layers */
+  --z-navigation-sticky: var(--z-index-sticky);
+  --z-navigation-header: var(--z-index-header);
+  --z-navigation-main: var(--z-index-navigation);
+  --z-navigation-sidebar: var(--z-index-sidebar);
+  
+  /* Interactive layers */
+  --z-interactive-button: var(--z-index-button);
+  --z-interactive-form: var(--z-index-form);
+  --z-interactive-input: var(--z-index-input);
+  --z-interactive-card: var(--z-index-card);
+  
+  /* Floating layers */
+  --z-floating-dropdown: var(--z-index-dropdown);
+  --z-floating-menu: var(--z-index-menu);
+  --z-floating-popover: var(--z-index-popover);
+  --z-floating-tooltip: var(--z-index-tooltip);
+  
+  /* Modal layers */
+  --z-modal-backdrop: var(--z-index-backdrop);
+  --z-modal-container: var(--z-index-modal);
+  --z-modal-content: var(--z-index-modal-content);
+  
+  /* Overlay layers */
+  --z-overlay-loading: var(--z-index-loading);
+  --z-overlay-blocking: var(--z-index-blocking);
+  --z-overlay-system: var(--z-index-overlay);
+  
+  /* Notification layers */
+  --z-notification-toast: var(--z-index-toast);
+  --z-notification-alert: var(--z-index-alert);
+  --z-notification-banner: var(--z-index-notification);
+  
+  /* System layers */
+  --z-system-debug: var(--z-index-debug);
+  --z-system-emergency: var(--z-index-emergency);
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+/* Negative layers */
+.z-behind { z-index: var(--z-index-behind); }
+.z-background { z-index: var(--z-index-background); }
+
+/* Base layers */
+.z-base { z-index: var(--z-index-base); }
+.z-auto { z-index: var(--z-index-auto); }
+
+/* Content layers */
+.z-content { z-index: var(--z-index-content); }
+.z-elevated { z-index: var(--z-index-elevated); }
+.z-card { z-index: var(--z-index-card); }
+
+/* Interactive layers */
+.z-button { z-index: var(--z-index-button); }
+.z-form { z-index: var(--z-index-form); }
+.z-input { z-index: var(--z-index-input); }
+
+/* Navigation layers */
+.z-sticky { z-index: var(--z-index-sticky); }
+.z-header { z-index: var(--z-index-header); }
+.z-navigation { z-index: var(--z-index-navigation); }
+.z-sidebar { z-index: var(--z-index-sidebar); }
+
+/* Floating layers */
+.z-dropdown { z-index: var(--z-index-dropdown); }
+.z-menu { z-index: var(--z-index-menu); }
+.z-popover { z-index: var(--z-index-popover); }
+.z-tooltip { z-index: var(--z-index-tooltip); }
+
+/* Modal layers */
+.z-backdrop { z-index: var(--z-index-backdrop); }
+.z-modal { z-index: var(--z-index-modal); }
+.z-modal-content { z-index: var(--z-index-modal-content); }
+
+/* Overlay layers */
+.z-loading { z-index: var(--z-index-loading); }
+.z-overlay { z-index: var(--z-index-overlay); }
+.z-blocking { z-index: var(--z-index-blocking); }
+
+/* Notification layers */
+.z-notification { z-index: var(--z-index-notification); }
+.z-toast { z-index: var(--z-index-toast); }
+.z-alert { z-index: var(--z-index-alert); }
+
+/* System layers */
+.z-debug { z-index: var(--z-index-debug); }
+.z-emergency { z-index: var(--z-index-emergency); }
+.z-maximum { z-index: var(--z-index-maximum); }
